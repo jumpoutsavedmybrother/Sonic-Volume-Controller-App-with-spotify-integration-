@@ -1,0 +1,1 @@
+When you copy and paste the code into an IDE make sure you select the "raw" and then copy it option as if you dont the title section of the app will display the name of my directory. I currently don't know how to fix this, but if I find out how to, then you will not see this message 
