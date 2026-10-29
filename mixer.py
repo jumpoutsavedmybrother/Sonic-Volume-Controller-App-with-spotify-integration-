@@ -23,32 +23,32 @@ class CompactVolumeMixer(ctk.CTk):
     THEME_ORDER = ["green", "purple", "red", "grey", "black", "white"]
 
     THEMES = {
-        "green": {
+        "green": { #green theme
             "mode": "dark", "bg_dark": "#0D0D0D", "panel_bg": "#141414", "scroll_bg": "#000000",
             "accent": "#1DB954", "hover": "#1AA34A", "text": "white", "subtext": "gray60",
             "button_bg": "#262626", "button_hover": "#3D3D3D"
         },
-        "purple": {
+        "purple": { #purple theme
             "mode": "dark", "bg_dark": "#0D0D0D", "panel_bg": "#141414", "scroll_bg": "#000000",
             "accent": "#9333EA", "hover": "#7E22CE", "text": "white", "subtext": "gray60",
             "button_bg": "#262626", "button_hover": "#3D3D3D"
         },
-        "red": {
+        "red": { #red theme
             "mode": "dark", "bg_dark": "#0D0D0D", "panel_bg": "#141414", "scroll_bg": "#000000",
             "accent": "#E50914", "hover": "#B80710", "text": "white", "subtext": "gray60",
             "button_bg": "#262626", "button_hover": "#3D3D3D"
         },
-        "grey": {
+        "grey": { #grey theme
             "mode": "dark", "bg_dark": "#121212", "panel_bg": "#1E1E1E", "scroll_bg": "#000000",
             "accent": "#9E9E9E", "hover": "#757575", "text": "white", "subtext": "gray60",
             "button_bg": "#2C2C2C", "button_hover": "#3D3D3D"
         },
-        "black": {
+        "black": { #black theme
             "mode": "dark", "bg_dark": "#050505", "panel_bg": "#0F0F0F", "scroll_bg": "#000000",
             "accent": "#FFFFFF", "hover": "#E5E5E5", "text": "white", "subtext": "gray60",
             "button_bg": "#222222", "button_hover": "#333333"
         },
-        "white": {
+        "white": { #white theme
             "mode": "light", "bg_dark": "#F3F4F6", "panel_bg": "#FFFFFF", "scroll_bg": "#FAFAFA",
             "accent": "#111827", "hover": "#374151", "text": "#111827", "subtext": "#6B7280",
             "button_bg": "#E5E7EB", "button_hover": "#D1D5DB"
@@ -63,7 +63,7 @@ class CompactVolumeMixer(ctk.CTk):
         self.attributes("-topmost", True)  
         self.overrideredirect(True)
         
-        # Transparent background trick for rounded borders
+        # Transparent background for rounded borders
         self.wm_attributes("-transparentcolor", "#000001")
         self.configure(fg_color="#000001")
 
@@ -75,7 +75,7 @@ class CompactVolumeMixer(ctk.CTk):
         self.current_theme_idx = 0
         ctk.set_appearance_mode("dark")
 
-        # State Variables
+        #variables
         self.withdraw()
         self.is_visible = False
         self.is_paused = False
@@ -85,11 +85,11 @@ class CompactVolumeMixer(ctk.CTk):
         self.current_track_display = None
         self.temp_listener = None
 
-        # Main Rounded Wrapper
+        #rounded Wrapper
         self.main_wrapper = ctk.CTkFrame(self, corner_radius=20)
         self.main_wrapper.pack(fill="both", expand=True, padx=2, pady=2)
 
-        # Window Dragging
+        #window Dragging
         self.main_wrapper.bind("<Button-1>", self.start_move)
         self.main_wrapper.bind("<B1-Motion>", self.do_move)
 
@@ -177,11 +177,11 @@ class CompactVolumeMixer(ctk.CTk):
         resized = img.resize((size, size), Image.Resampling.LANCZOS)
         return ctk.CTkImage(light_image=resized, dark_image=resized, size=(size, size))
 
-    def cycle_theme(self):
+    def cycle_theme(self): 
         self.current_theme_idx = (self.current_theme_idx + 1) % len(self.THEME_ORDER)
         self.apply_theme(self.THEME_ORDER[self.current_theme_idx])
 
-    def apply_theme(self, theme_name):
+    def apply_theme(self, theme_name): 
         t = self.THEMES[theme_name]
         ctk.set_appearance_mode(t["mode"])
         
@@ -260,7 +260,7 @@ class CompactVolumeMixer(ctk.CTk):
         self.hotkey_btn.configure(text=f"Hotkey: {display_str} (Click to Remap)")
         self.init_hotkey_listener()
 
-    def fetch_album_art(self, track_str):
+    def fetch_album_art(self, track_str): #api for ablum covers
         if track_str == self.cached_track and self.cached_image:
             return self.cached_image
         clean_query = re.sub(r'[\(\[\{].*?[\)\]\}]', '', track_str).strip() or track_str
