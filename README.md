@@ -1,4 +1,4 @@
-Make sure you close GitHub before you launch the app, or the repository name will be displayed in the (the base hotkey is CTRL + SHIFT + M)
+Make sure you close GitHub before you launch the app, or the repository name will be displayed where the song title is meant to be displayed (the base hotkey is CTRL + SHIFT + M)
 To get the program to work, you will have to install the following libraries in Thonny: customtkinter, pycaw, pynput, psutil, Pillow.
 To install these libraries Open Thonny.
 Click Tools in the top menu bar and select Manage packages....
