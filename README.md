@@ -11,7 +11,7 @@ Modern UI: A clean, CustomTkinter-based dark theme interface.
 Global Hotkeys: Quickly summon or dismiss the overlay from anywhere (Default: Ctrl+Shift+K).
 
 Due to standard network security policies and Windows Defender often flagging unverified, custom-built executable files, this project is distributed as source code. Compiling the application directly on your own machine takes only a minute and ensures it runs perfectly within your specific Windows environment without triggering security blocks or missing background dependencies.
-## **Files**
+
 ## Files
 | File | Job |
 |---|---|
