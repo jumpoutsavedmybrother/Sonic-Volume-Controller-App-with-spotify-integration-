@@ -1,4 +1,4 @@
-Sonic Volume Mixer (v2)
+# Sonic Volume Mixer (v2)
 A sleek, modular Windows volume mixer built with Python. Sonic provides a modern overlay for controlling your master volume, per-app audio sources (like Spotify, Chrome, etc.), and media playback, complete with live album artwork and global hotkeys.
 
 🌟 Features
