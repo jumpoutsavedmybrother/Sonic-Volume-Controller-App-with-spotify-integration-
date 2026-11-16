@@ -1,0 +1,15 @@
+customtkinter
+Pillow
+pycaw
+pynput
+pystray          # system tray icon
+
+# Windows media session (now playing / album art / play-pause).
+# Each WinRT namespace is its own package. Pinned to 3.2.1, the last release before PyPI's
+# version scheme changed (the newest releases are 4!10.0.x and need Python 3.11+).
+# If pip says one of these versions doesn't exist, remove the pin on that line only.
+winrt-runtime==3.2.1
+winrt-Windows.Foundation==3.2.1
+winrt-Windows.Foundation.Collections==3.2.1
+winrt-Windows.Media.Control==3.2.1
+winrt-Windows.Storage.Streams==3.2.1
