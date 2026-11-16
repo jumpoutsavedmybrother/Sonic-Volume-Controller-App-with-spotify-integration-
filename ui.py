@@ -56,7 +56,7 @@ class CompactVolumeMixer(ctk.CTk):
         ctk.set_appearance_mode("dark")
 
         #variables
-        self.withdraw()
+        #self.withdraw()
         self.is_visible = False
         self.is_paused = False
         self.current_track_display = None
@@ -621,3 +621,4 @@ class CompactVolumeMixer(ctk.CTk):
         self.withdraw()
         self.is_visible = False
         self._cancel_jobs()
+
