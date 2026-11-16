@@ -51,6 +51,6 @@ Simply double-click the build.bat file included in the folder. This script will 
 Once the black build window finishes and closes, open the newly generated dist folder, and then open the sonic folder inside it.
 
 Double-click sonic.exe to launch the app. 
-It wont show up in your taskbar until you press the hotkey to activate it, the base hotkey is Crtl+Shift+L or Crtl+Shift+I
+It wont show up in your taskbar until you press the hotkey to activate it, the base hotkey is Crtl+Shift+K 
 
 ## **Important**: Do not move sonic.exe out of this folder, as it requires the accompanying _internal directory to function. Instead, right-click sonic.exe and select Show more options > Send to > Desktop (create shortcut), or pin it to your taskbar for easy access.
