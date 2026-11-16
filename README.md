@@ -10,16 +10,7 @@ Modern UI: A clean, CustomTkinter-based dark theme interface.
 
 Global Hotkeys: Quickly summon or dismiss the overlay from anywhere (Default: Ctrl+Shift+K).
 
- **Tech Stack & Dependencies**
--- Program / Library	Purpose in Sonic
--- Python	The core programming language running the application logic.
--- CustomTkinter	Renders the modern, dark-themed graphical user interface (GUI) and interactive sliders.
--- Pycaw	Interfaces with the Windows Core Audio API to control master volume and individual application audio levels.
--- WinRT	Hooks directly into Windows Media Controls to fetch live album artwork, read track titles, and handle play/pause/skip commands.
--- Pystray	Manages the system tray icon, allowing the app to run seamlessly in the background.
--- PyInstaller	The compilation tool used in build.bat to package the raw Python scripts and visual assets into a runnable .exe folder.
- Why Build Locally?
--- Due to standard network security policies and Windows Defender often flagging unverified, custom-built executable files, this project is distributed as source code. Compiling the application directly on your own machine takes only a minute and ensures it runs perfectly within your specific Windows environment without triggering security blocks or missing background dependencies.
+Due to standard network security policies and Windows Defender often flagging unverified, custom-built executable files, this project is distributed as source code. Compiling the application directly on your own machine takes only a minute and ensures it runs perfectly within your specific Windows environment without triggering security blocks or missing background dependencies.
 
  **Prerequisites**
 -- Windows 10 or 11
